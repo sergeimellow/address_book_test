@@ -1,4 +1,9 @@
-= form_for @book do |f|
+= form_for @book , validate: true do |f|
+  - if @book.errors.count > 0
+    div.errors
+      - @book.errors.full_messages.each do |error|
+        | #{error} 
+
   .field
     = f.label :title
     = f.text_field :title
@@ -6,4 +11,6 @@
     = f.label :description
     = f.text_field :description
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', id: "submit"
+
+= link_to 'Back', books_path

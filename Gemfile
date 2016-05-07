@@ -37,6 +37,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # for index page of address books
 gem 'jquery-datatables-rails'
 
+
 group :development, :test do
   gem 'byebug'
 end

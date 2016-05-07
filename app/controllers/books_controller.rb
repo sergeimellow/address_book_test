@@ -22,7 +22,7 @@ before_action :set_book, only: [:show, :edit, :update, :destroy]
  	end
 
 	def show
-
+		@contacts = @book.contacts
 	end
 
 	def update

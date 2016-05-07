@@ -7,7 +7,7 @@ center
       	| #{count+1} #{address_book.title} - 
         = link_to "View ", address_book
         | | 
-        = link_to "Edit ", edit_book_path(address_book)
+        = link_to "Edit ", edit_book_path(address_book), :method => :get
 
 center
   h4
