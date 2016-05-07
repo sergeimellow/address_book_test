@@ -1,0 +1,9 @@
+h2
+  | Address books
+= @all_books do |address_book|
+  ul
+    li
+      p
+        = address_book.title
+      p
+        = address_book.description.trucate(20)
