@@ -1,0 +1,13 @@
+p
+  strong
+    | name:
+  = @book.title
+p
+  strong
+    | description:
+  = @book.description
+
+
+
+p  
+  = link_to "Back to Addrress books","/books", :method => :get

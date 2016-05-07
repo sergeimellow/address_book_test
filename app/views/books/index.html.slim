@@ -1,9 +1,14 @@
 h2
-  | Address books
-= @all_books do |address_book|
-  ul
-    li
+  center My Address Books
+
+center 
+	- @all_books.each_with_index do |address_book, count|
       p
-        = address_book.title
-      p
-        = address_book.description.trucate(20)
+      	| #{count+1} #{address_book.title} - 
+        = link_to "View ", address_book
+        | | 
+        = link_to "Edit ", edit_book_path(address_book)
+
+center
+  h4
+    = link_to "Create New Address Book", new_book_path
