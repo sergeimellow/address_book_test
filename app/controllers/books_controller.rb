@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_filter :authenticate_user!
-  before_action :set_book, only: [:show, :edit, :update, :destroy]
+  before_action :set_book, only: [:show, :edit, :update, :destroy, :import]
 
   def index
     @all_books = current_user.books
@@ -23,6 +23,10 @@ class BooksController < ApplicationController
 
   def show
     @contacts = @book.contacts
+    respond_to do |format|
+      format.html
+      format.csv { send_data @book.to_csv }
+    end
   end
 
   def update
@@ -32,7 +36,11 @@ class BooksController < ApplicationController
       render action: 'edit'
     end
   end
-
+  
+  def import
+    Book.import(params[:file])
+    redirect_to redirect_to @book, notice: "People imported."
+  end
 
   private
     def set_book

@@ -45,6 +45,13 @@ script
 
 p  
   = link_to "Create Contact", new_book_contact_path(@book), :method => :get
+p
+  = link_to "Download Contacts (CSV File)", book_path(format:"csv")
 
+p 
+  | TODO: Import Contacts with CSV File (Available fields: id, first_name, last_name, description(optional), email_addresses, phone_numbers)
+  = form_tag import_books_path, multipart: true do
+    = file_field_tag :file
+    = submit_tag "Import"
 p  
   = link_to "Back to Address books","/books", :method => :get

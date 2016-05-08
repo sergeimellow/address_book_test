@@ -5,4 +5,7 @@ p
 p
   = "Phone Number(s):" + @contact.phone_numbers.to_s.gsub(/["\[\]]/, "") if @contact.phone_numbers
 
-= link_to 'Back', @contact.book
+p
+  | TODO: Set-up mailer for users to share contact details via email with others
+p
+  = link_to 'Back', @contact.book
