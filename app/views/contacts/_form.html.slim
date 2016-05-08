@@ -18,13 +18,13 @@
     = f.label :description
     = f.text_field :description
   .field
-    = f.label :phone_numbers
+    = f.label :phone_numbers 
     |(seperated by commas, 1 required)
-    = f.text_field :phone_numbers
+    = f.text_field :phone_numbers, :value => @contact.phone_numbers.map { |i|  i.to_s }.join(",")
   .field
     = f.label :email_addresses
     |(seperated by commas, 1 required)
-    = f.text_field :email_addresses
+    = f.text_field :email_addresses, :value => @contact.email_addresses.map { |i|  i.to_s }.join(",")
   .actions
     = f.submit 'Save', id: "validate_submit_2"
     span[style="opacity:0;"]

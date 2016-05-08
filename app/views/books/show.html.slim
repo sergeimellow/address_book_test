@@ -26,7 +26,7 @@ table#contacts.display[cellspacing="0" width="100%"]
     - @contacts.each do |contact|
       tr
         td
-          = contact.first_name + contact.last_name
+          = contact.first_name + " " + contact.last_name
         td
           = contact.email_addresses.to_s.gsub(/["\[\]]/, "") if contact.email_addresses
         td
@@ -36,7 +36,7 @@ table#contacts.display[cellspacing="0" width="100%"]
         td
           = link_to 'Edit', "/books/#{@book.id}/contacts/"+contact.id.to_s+"/edit", :method => :get
         td 
-          = link_to 'Delete', "/books/#{@book.id}/contacts/"+contact.id.to_s, :method => :delete
+          = link_to 'Delete', "/books/#{@book.id}/contacts/"+contact.id.to_s, :method => :delete, data: { confirm: 'Are you sure you want to delete this contact?' }
 
 
 script
