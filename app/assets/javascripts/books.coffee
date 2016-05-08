@@ -1,10 +1,8 @@
+# simple client side input validation for phone and email formats with CoffeeScript/jQuery
 $(document).ready ->
-  console.log("~~~~")
-  $('#submit').click ->
-    console.log("~~~~2")
-    title = document.getElementById('book_title').value
-    console.log(title)
-    if title.length == 0
-      alert 'Please input a first name'
-    return
-  return
+  $('#validate_submit').click (event) ->
+    event.preventDefault()
+    if $('#book_title').val().length > 0
+      $('#submit_book').click()
+    else
+      $('#err_span').css 'opacity', '1'

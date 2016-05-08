@@ -6,6 +6,7 @@ p
   strong
     | description:
   = @book.description
+
 table#contacts.display[cellspacing="0" width="100%"]
   thead
     tr
@@ -16,28 +17,34 @@ table#contacts.display[cellspacing="0" width="100%"]
       th
         | Phone Numbers
       th
+        | View
       th
+        | Edit
       th
+        | Delete
   tbody
-  - @contacts.each do |contact|
-    tr
-      td
-        = contact.first_name + contact.last_name
-      td
-        = contact.email_address if contact.email_address
-      td
-        = contact.phone_number if contact.phone_number
-      td
-        = link_to 'View', contact
-      td
-        = link_to 'Edit', edit_contact_path(contact)
-      td
-        = link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' }
+    - @contacts.each do |contact|
+      tr
+        td
+          = contact.first_name + contact.last_name
+        td
+          = contact.email_addresses.to_s.gsub(/["\[\]]/, "") if contact.email_addresses
+        td
+          = contact.phone_numbers.to_s.gsub(/["\[\]]/, "") if contact.phone_numbers
+        td
+          = link_to 'View', "/books/#{@book.id}/contacts/"+contact.id.to_s
+        td
+          = link_to 'Edit', "/books/#{@book.id}/contacts/"+contact.id.to_s+"/edit", :method => :get
+        td 
+          = link_to 'Delete', "/books/#{@book.id}/contacts/"+contact.id.to_s, :method => :delete
+
 
 script
-  |  $(document).ready(function() { $('#contacts').DataTable( { "columnDefs": [ { "orderable": false, "targets": [ 3,4,5 ] } ] } ); } ); 
+  | $(document).ready(function() { $('#contacts').DataTable( { "columnDefs": [ { "orderable": false, "targets": [ 3,4,5 ] } ] } ); } ); 
 
 
+p  
+  = link_to "Create Contact", new_book_contact_path(@book), :method => :get
 
 p  
   = link_to "Back to Addrress books","/books", :method => :get

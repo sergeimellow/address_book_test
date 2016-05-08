@@ -1,16 +1,22 @@
-= form_for @book , validate: true do |f|
+= form_for @book do |f|
   - if @book.errors.count > 0
     div.errors
       - @book.errors.full_messages.each do |error|
-        | #{error} 
+        | #{error}
+  span#err_span[style="color:red; opacity:0;"]
+    | Please fill out all required.
 
   .field
     = f.label :title
+    | (required)
+    asd
     = f.text_field :title
   .field
     = f.label :description
     = f.text_field :description
   .actions
-    = f.submit 'Save', id: "submit"
+    = f.submit 'Save', id: "validate_submit"
+    span[style="opacity:0;"]
+      = f.submit 'Save', id: "submit_book"
 
 = link_to 'Back', books_path

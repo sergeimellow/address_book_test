@@ -1,0 +1,33 @@
+= form_for([@contact.book, @contact]) do |f|
+  - if @contact.errors.count > 0
+    div.errors
+      - @contact.errors.full_messages.each do |error|
+        | #{error}
+  span#err_span[style="color:red; opacity:0;"]
+    | Please fill out all required.
+
+  .field
+    = f.label :first_name
+    |(required)
+    = f.text_field :first_name
+  .field
+    = f.label :last_name
+    |(required)
+    = f.text_field :last_name
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :phone_numbers
+    |(seperated by commas, 1 required)
+    = f.text_field :phone_numbers
+  .field
+    = f.label :email_addresses
+    |(seperated by commas, 1 required)
+    = f.text_field :email_addresses
+  .actions
+    = f.submit 'Save', id: "validate_submit_2"
+    span[style="opacity:0;"]
+      = f.submit 'Save', id: "submit_book"
+
+= link_to 'Back', @contact.book

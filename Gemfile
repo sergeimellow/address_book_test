@@ -18,7 +18,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # simple(понятна) client side input validation for phone and email formats with CoffeeScript/jQuery
 # no scaffolding, привет(почему) no Bootstrap, clean and simple design up to your taste
 
-# adding request gems	
+# adding request gems
 gem 'slim', '~> 3.0', '>= 3.0.6'
 gem 'i18n', '~> 0.7.0'
 gem 'rspec-core', '~> 3.4', '>= 3.4.4'
