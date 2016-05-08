@@ -6,9 +6,9 @@ center
   - @all_books.each_with_index do |address_book, count|
     p
       | #{count+1}) #{address_book.title} - 
-      = link_to "View ", address_book
-      | | 
-      = link_to "Edit ", edit_book_path(address_book), :method => :get
+      = link_to "View", address_book
+      | #{" | "}
+      = link_to "Edit", edit_book_path(address_book), :method => :get
 center
   h4
     = link_to "Create New Address Book", new_book_path, :method => :get
