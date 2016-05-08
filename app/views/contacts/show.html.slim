@@ -1,8 +1,8 @@
 p
-  = @contact.first_name + " "+ @contact.last_name
+  = "Name: " + @contact.first_name + " " + @contact.last_name
 p
-  = @contact.email_addresses.to_s.gsub(/["\[\]]/, "") if @contact.email_addresses
+  = "Email(s): " + @contact.email_addresses.to_s.gsub(/["\[\]]/, "") if @contact.email_addresses
 p
-  = @contact.phone_numbers.to_s.gsub(/["\[\]]/, "") if @contact.phone_numbers
+  = "Phone Number(s):" + @contact.phone_numbers.to_s.gsub(/["\[\]]/, "") if @contact.phone_numbers
 
 = link_to 'Back', @contact.book

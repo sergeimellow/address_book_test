@@ -21,7 +21,7 @@ class ContactsController < ApplicationController
     if @contact.save
       redirect_to @book
     else
-      redirect_to root_path
+      render action: 'new'
     end
   end
 
