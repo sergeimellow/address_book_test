@@ -1,5 +1,6 @@
 h2
-  center My Address Books
+  center 
+    = t("books.my_address_books")
 
 center 
   - @all_books.each_with_index do |address_book, count|
@@ -10,4 +11,4 @@ center
       = link_to "Edit ", edit_book_path(address_book), :method => :get
 center
   h4
-    = link_to "Create New Address Book", new_book_path
+    = link_to "Create New Address Book", new_book_path, :method => :get
