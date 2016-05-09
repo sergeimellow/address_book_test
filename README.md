@@ -19,7 +19,7 @@ http://sergeimellow.com/address_book
 * **Slim**, **Coffee**, **SASS**(very little, no time), **I18n**(index page, 1 header), Spec, **SQLite** (just for easy setup) or Postgres
 * **server side model validations**
 * **client side input validation for phone and email formats with CoffeeScript/jQuery** (very simple)
-* no scaffolding, привет no Bootstrap, clean and simple design up to your taste
+* **no scaffolding, привет no Bootstrap, clean and simple design up to your taste** (no time for styling)
 
 
 ### Ruby / Rails versions:  
