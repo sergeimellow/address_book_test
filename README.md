@@ -1,4 +1,24 @@
 ## Address book: ##
+Basic Web based address book that allows users to login/register and create multiple address books. Each address book as its own list of contacts.
+
+
+## Requirements Met ##
+* listing/creating/editing/removing contacts and showing a single contact on it's own page
+* exporting/importing contacts to/from a CSV file (overwrite contacts with the same full name on import)
+* sharing contact details by email
+* searching for contacts (optional, if you have time left)
+* Each contact should have: first name
+* last name
+* multiple emails
+* multiple phone numbers
+* Each full name should be unique. Each contact should have at least one phone number or email.
+
+Requirements: latest Rails and Ruby versions
+* **first git commit right after rails new, other ones as you like**
+* **Slim**, **Coffee**, **SASS**, **I18n**, Spec, **SQLite** (just for easy setup) or Postgres
+* **server side model validations**
+* **simple client side input validation for phone and email formats with CoffeeScript/jQuery** (very simple)
+* **no scaffolding, привет no Bootstrap, clean and simple design up to your taste**
 
 
 
