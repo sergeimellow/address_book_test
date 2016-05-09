@@ -39,5 +39,5 @@ http://localhost:3000/
 ```
 
 ### Seed User  
-username:tester1@test.com
-password:tester1123
+* username:tester1@test.com
+* password:tester1123
