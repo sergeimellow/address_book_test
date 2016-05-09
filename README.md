@@ -1,17 +1,17 @@
 ## Address book: ##
-Basic Web based address book that allows users to login/register and create multiple address books. Each address book as its own list of contacts.
+Basic Web based address book that allows users to login/register and create multiple address books. Each address book has its own list of contacts.
 
 
-## Requirements Met ##
-* listing/creating/editing/removing contacts and showing a single contact on it's own page
-* exporting/importing contacts to/from a CSV file (overwrite contacts with the same full name on import)
-* sharing contact details by email
-* searching for contacts (optional, if you have time left)
-* Each contact should have: first name
-* last name
-* multiple emails
-* multiple phone numbers
-* Each full name should be unique. Each contact should have at least one phone number or email.
+## Requirements Met in **Bold** ##
+* **listing/creating/editing/removing contacts and showing a single contact on it's own page**
+* **exporting**/importing(not finished) contacts to/from a CSV file (overwrite contacts with the same full name on import)
+* (in progress) sharing contact details by email
+* **searching for contacts (optional, if you have time left)**
+* **Each contact should have: first name**
+* **last name**
+* **multiple emails**
+* **multiple phone numbers**
+* **Each full name should be unique. Each contact should have at least one phone number or email.**
 
 ## Requirements: latest Rails and Ruby versions ##
 
@@ -22,11 +22,9 @@ Basic Web based address book that allows users to login/register and create mult
 * no scaffolding, привет no Bootstrap, clean and simple design up to your taste
 
 
-
 ### Ruby / Rails versions:  
-ruby '2.3.1'
-gem 'rails', '4.2.6'
-
+* ruby '2.3.1'
+* gem 'rails', '4.2.6'
 
 ### To run Locally: ###
 ```
