@@ -13,16 +13,17 @@ Basic Web based address book that allows users to login/register and create mult
 * multiple phone numbers
 * Each full name should be unique. Each contact should have at least one phone number or email.
 
-Requirements: latest Rails and Ruby versions
-* **first git commit right after rails new, other ones as you like**
-* **Slim**, **Coffee**, **SASS**, **I18n**, Spec, **SQLite** (just for easy setup) or Postgres
-* **server side model validations**
-* **simple client side input validation for phone and email formats with CoffeeScript/jQuery** (very simple)
-* **no scaffolding, привет no Bootstrap, clean and simple design up to your taste**
+## Requirements: latest Rails and Ruby versions ##
+
+* first git commit right after rails new, other ones as you like
+* Slim, Coffee, SASS, *I18n, Spec, SQLite (just for easy setup) or Postgres
+* server side model validations
+*  client side input validation for phone and email formats with CoffeeScript/jQuery** (very simple)
+* no scaffolding, привет no Bootstrap, clean and simple design up to your taste
 
 
 
-### Ruby / Rails versions: ### 
+### Ruby / Rails versions:  
 ruby '2.3.1'
 gem 'rails', '4.2.6'
 
@@ -37,6 +38,6 @@ rails s
 http://localhost:3000/
 ```
 
-### Seed User ### 
+### Seed User  
 username:tester1@test.com
 password:tester1123
